@@ -1,5 +1,5 @@
 # HelloToast
- This code sample is created related to codelab: [Android fundamentals 01.1: Android Studio and Hello World](https://codelabs.developers.google.com/codelabs/android-training-hello-world/index.html?index=..%2F..android-training#12)
+ This code sample is created related to codelab: [Android fundamentals 01.2 Part A: Your first interactive UI](https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/index.html?index=..%2F..android-training#10)
 
 # Copyright
     
