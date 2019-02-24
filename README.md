@@ -1,5 +1,5 @@
-# HelloToast
- This code sample is created related to codelab: [Android fundamentals 01.2 Part A: Your first interactive UI](https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/index.html?index=..%2F..android-training#10)
+# Android Developer Fundamentals Course by Kotlin
+ The branches under this repo is related to codelabs [Android Developer Fundamentals Course](https://codelabs.developers.google.com/android-training/) This is an experimental work and open to any contributions.
 
 # Copyright
     
