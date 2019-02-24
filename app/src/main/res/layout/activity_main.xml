@@ -19,10 +19,10 @@
 
 
 	<ScrollView
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_below="@id/article_heading">
-		<LinearLayout android:layout_width="wrap_content"
+		<LinearLayout android:layout_width="match_parent"
 					  android:layout_height="wrap_content"
 					  android:orientation="vertical">
 			<TextView
@@ -41,6 +41,13 @@
 					android:text="@string/article_text"
 					android:padding="@dimen/padding_regular"
 					android:autoLink="web"/>
+
+			<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@android:color/darker_gray"
+					android:textColor="@android:color/black"
+					android:text="@string/add_comment"
+					android:padding="@dimen/padding_regular"/>
 		</LinearLayout>
 	</ScrollView>
 
