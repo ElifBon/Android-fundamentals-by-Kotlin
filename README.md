@@ -1,4 +1,4 @@
-# branch:Android fundamentals 01.2 Part A: Your first interactive UI
+# Branch:Android fundamentals 01.2 Part A: Your first interactive UI
  This code sample is created related to codelab: [Android fundamentals 01.2 Part A: Your first interactive UI](https://codelabs.developers.google.com/codelabs/android-training-layout-editor-part-a/index.html?index=..%2F..android-training#10)
 
 # Copyright
