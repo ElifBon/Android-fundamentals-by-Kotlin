@@ -5,37 +5,50 @@
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		tools:context=".MainActivity">
-    <Button
-            android:text="@string/button_label_toast"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/buttonid" android:layout_marginTop="8dp"
-            android:background="@color/colorPrimary"
-            android:textColor="@android:color/white" tools:text="Toast"
-            android:onClick="showToast" android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-			android:layout_alignParentTop="true"/>
+
 	<TextView
-			android:text="@string/count_initial_value"
+			android:id="@+id/article_heading"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:layout_below="@+id/buttonid"
-			android:id="@+id/show_count" android:layout_marginTop="8dp"
-			android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
-			tools:text="0" android:textStyle="bold" android:textSize="160sp" android:gravity="center|clip_vertical"
-			android:textColor="@color/colorPrimary"
-			android:layout_alignParentStart="true"
-			android:layout_alignParentLeft="true"/>
-    <Button
-            android:text="@string/button_label_count"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/button2id"
-            android:layout_marginBottom="8dp"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp" android:background="@color/colorPrimary"
-            android:textColor="@android:color/white" tools:text="Count"
-            android:onClick="countUp"
-			android:layout_below="@+id/show_count"/>
+			android:text="@string/article_title"
+			android:background="@color/colorPrimary"
+			android:textColor="@android:color/white"
+			android:padding="@dimen/padding_regular"
+			android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+			android:textStyle="bold"/>
+
+
+	<ScrollView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/article_heading">
+		<LinearLayout android:layout_width="match_parent"
+					  android:layout_height="wrap_content"
+					  android:orientation="vertical">
+			<TextView
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:id="@+id/article_subheading"
+					android:padding="@dimen/padding_regular"
+					android:text="@string/article_subtitle"
+					android:textAppearance=
+							"@android:style/TextAppearance.DeviceDefault"/>
+			<TextView
+					android:id="@+id/article"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:lineSpacingExtra="5sp"
+					android:text="@string/article_text"
+					android:padding="@dimen/padding_regular"
+					android:autoLink="web"/>
+
+			<Button android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:background="@android:color/darker_gray"
+					android:textColor="@android:color/black"
+					android:text="@string/add_comment"
+					android:padding="@dimen/padding_regular"/>
+		</LinearLayout>
+	</ScrollView>
 
 </RelativeLayout>
