@@ -1,54 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
 		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
 		xmlns:tools="http://schemas.android.com/tools"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
 		tools:context=".MainActivity">
 
-	<TextView
-			android:id="@+id/article_heading"
-			android:layout_width="match_parent"
+	<android.support.design.widget.AppBarLayout
 			android:layout_height="wrap_content"
-			android:text="@string/article_title"
-			android:background="@color/colorPrimary"
-			android:textColor="@android:color/white"
-			android:padding="@dimen/padding_regular"
-			android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-			android:textStyle="bold"/>
-
-
-	<ScrollView
 			android:layout_width="match_parent"
+			android:theme="@style/AppTheme.AppBarOverlay">
+
+		<android.support.v7.widget.Toolbar
+				android:id="@+id/toolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				android:background="?attr/colorPrimary"
+				app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	</android.support.design.widget.AppBarLayout>
+
+	<include layout="@layout/content_main"/>
+
+	<android.support.design.widget.FloatingActionButton
+			android:id="@+id/fab"
+			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_below="@id/article_heading">
-		<LinearLayout android:layout_width="match_parent"
-					  android:layout_height="wrap_content"
-					  android:orientation="vertical">
-			<TextView
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:id="@+id/article_subheading"
-					android:padding="@dimen/padding_regular"
-					android:text="@string/article_subtitle"
-					android:textAppearance=
-							"@android:style/TextAppearance.DeviceDefault"/>
-			<TextView
-					android:id="@+id/article"
-					android:layout_width="match_parent"
-					android:layout_height="wrap_content"
-					android:lineSpacingExtra="5sp"
-					android:text="@string/article_text"
-					android:padding="@dimen/padding_regular"
-					android:autoLink="web"/>
+			android:layout_gravity="bottom|end"
+			android:layout_margin="@dimen/fab_margin"
+			app:srcCompat="@android:drawable/ic_dialog_email"/>
 
-			<Button android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:background="@android:color/darker_gray"
-					android:textColor="@android:color/black"
-					android:text="@string/add_comment"
-					android:padding="@dimen/padding_regular"/>
-		</LinearLayout>
-	</ScrollView>
-
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
