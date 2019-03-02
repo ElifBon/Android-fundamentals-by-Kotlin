@@ -1,8 +1,10 @@
 package elifbon.com
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
+import android.view.View
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,7 +15,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun launchSecondActivity(){
+    fun launchSecondActivity(view:View){
         Log.d(LOG_TAG, "Button clicked!");
+
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
     }
 }
