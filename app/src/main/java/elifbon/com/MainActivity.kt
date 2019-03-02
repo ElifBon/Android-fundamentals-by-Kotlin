@@ -25,10 +25,26 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.d(LOG_TAG, "-------");
+        Log.d(LOG_TAG, "onCreate");
+
         setContentView(R.layout.activity_main)
 
         mMessageEditText = findViewById(R.id.editText_main);
     }
+
+    public override fun onStart() {
+        super.onStart()
+        Log.d(LOG_TAG, "onStart")
+    }
+
+
+    public override fun onResume() {
+        super.onResume()
+        Log.d(LOG_TAG, "onStart")
+    }
+
 
     fun launchSecondActivity(view:View){
         Log.d(LOG_TAG, "Button clicked!");
