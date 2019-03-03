@@ -33,6 +33,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun openLocation(view:View){
+        val loc = location_edittext.text.toString()
+
+        val addressUri = Uri.parse("geo:0,0?q=$loc")
+
+        val intent = Intent(Intent.ACTION_VIEW, addressUri)
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        } else {
+            Log.d("ImplicitIntents", "Can't handle this intent!");
+        }
 
     }
 
