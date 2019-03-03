@@ -1,9 +1,12 @@
 package elifbon.com
 
 import android.os.Bundle
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -41,6 +44,17 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun changeColor(view: View){
+        val random = Random()
+
+        val colorName = mColorArray[random.nextInt(20)]
+        val colorResourceName = resources.getIdentifier(
+            colorName,
+            "color", applicationContext.packageName
+        )
+
+        val colorRes = ContextCompat.getColor(this, colorResourceName)
+
+        hello_textview.setTextColor(colorRes)
 
     }
 
