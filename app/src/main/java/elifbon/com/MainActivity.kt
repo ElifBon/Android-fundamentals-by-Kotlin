@@ -32,6 +32,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         mMessageEditText = findViewById(R.id.editText_main);
+
+        if(savedInstanceState != null){
+            var visibility:Boolean = savedInstanceState.getBoolean("reply_visible")
+            if(visibility){
+                text_header_reply.visibility = View.VISIBLE
+                text_message_reply.visibility = View.VISIBLE
+                var message:String = savedInstanceState.getString("reply_text")
+                text_message_reply.setText(message)
+            }
+        }
     }
 
     public override fun onStart() {
@@ -69,7 +79,21 @@ class MainActivity : AppCompatActivity() {
                 text_header_reply.setVisibility(View.VISIBLE)
                 text_message_reply.setText(reply)
                 text_message_reply.setVisibility(View.VISIBLE)
+            }else{
+                text_message_reply.setText("")
+                text_header_reply.setVisibility(View.INVISIBLE)
+                text_message_reply.setVisibility(View.INVISIBLE)
             }
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+
+        if (text_header_reply.getVisibility() == View.VISIBLE) {
+            outState.putBoolean("reply_visible", true)
+            outState.putString("reply_text",text_message_reply.getText().toString())
+
         }
     }
 }
