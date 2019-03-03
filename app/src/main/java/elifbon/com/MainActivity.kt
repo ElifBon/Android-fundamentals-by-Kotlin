@@ -3,6 +3,7 @@ package elifbon.com
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.support.v4.app.ShareCompat
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import android.view.View
@@ -49,5 +50,14 @@ class MainActivity : AppCompatActivity() {
 
     fun shareText(view:View){
 
+        val txt = share_edittext.text.toString()
+        val mimeType = "text/plain"
+
+        ShareCompat.IntentBuilder
+            .from(this)
+            .setType(mimeType)
+            .setChooserTitle(getString(R.string.share_title))
+            .setText(txt)
+            .startChooser();
     }
 }
